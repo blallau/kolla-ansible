@@ -1093,7 +1093,7 @@ vmware_vcenter_insecure: "True"
 #####################
 # S3 support
 ######################
-s3_url: "http://ceph:9000"
+s3_url: "http://ceph"
 s3_access_key: "minio"
 s3_secret_key: "minio123"
 s3_bucket: "glance"
