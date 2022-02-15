@@ -182,6 +182,9 @@ glance_api_container_proxy: "{{ container_proxy }}"
 # Glance
 ####################
 glance_backends:
+  - name: minio_glance
+    type: s3
+    enabled: "{{ glance_backend_s3 | bool }}"
   - name: file
     type: file
     enabled: "{{ glance_backend_file | bool }}"

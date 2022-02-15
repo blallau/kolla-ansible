@@ -66,6 +66,8 @@ default_backend = vmware
 default_backend = rbd
 {% elif glance_backend_swift | bool %}
 default_backend = swift
+{% elif glance_backend_s3 | bool %}
+default_backend = minio_glance
 {% else %}
 default_backend = file
 {% endif %}
@@ -92,6 +94,16 @@ swift_store_region = {{ openstack_region_name }}
 default_swift_reference = swift
 swift_store_config_file = /etc/glance/glance-swift.conf
 swift_store_auth_insecure = True
+{% endif %}
+
+{% if glance_backend_s3 | bool %}
+[minio_glance]
+s3_store_host = {{ s3_url }}
+s3_store_access_key = {{ s3_access_key }}
+s3_store_secret_key = {{ s3_secret_key }}
+s3_store_bucket = {{ s3_bucket }}
+s3_store_create_bucket_on_put = True
+s3_store_bucket_url_format = auto
 {% endif %}
 
 {% if glance_backend_vmware | bool %}
