@@ -6,6 +6,7 @@
     dest: "{{ kolla_dev_repos_directory }}/{{ project_name }}"
     update: "{{ horizon_dev_repos_pull }}"
     version: "{{ horizon_source_version }}"
+    depth: 1
 
 - name: Cloning murano-dashboard source repositories for development
   become: true

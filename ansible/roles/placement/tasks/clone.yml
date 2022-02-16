@@ -6,3 +6,4 @@
     dest: "{{ kolla_dev_repos_directory }}/{{ project_name }}"
     update: "{{ placement_dev_repos_pull }}"
     version: "{{ placement_source_version }}"
+    depth: 1

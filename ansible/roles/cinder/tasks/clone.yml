@@ -6,3 +6,4 @@
     dest: "{{ kolla_dev_repos_directory }}/{{ project_name }}"
     update: "{{ cinder_dev_repos_pull }}"
     version: "{{ cinder_source_version }}"
+    depth: 1
