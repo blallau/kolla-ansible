@@ -1094,6 +1094,7 @@ s3_url: "http://ceph:9000"
 s3_access_key: "minio"
 s3_secret_key: "minio123"
 s3_bucket: "glance"
+s3_backup_bucket: "volumebackups"
 
 #############################################
 # MariaDB component-specific database details

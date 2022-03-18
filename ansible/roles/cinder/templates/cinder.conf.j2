@@ -51,6 +51,11 @@ backup_swift_auth = per_user
 backup_swift_auth_version = 1
 backup_swift_user =
 backup_swift_key =
+{% elif cinder_backup_driver == "s3" %}
+backup_s3_endpoint_url = {{ s3_url }}
+backup_s3_store_access_key = {{ s3_access_key }}
+backup_s3_store_secret_key = {{ s3_secret_key }}
+backup_s3_store_bucket = {{ s3_backup_bucket }}
 {% endif %}
 {% endif %}
 
