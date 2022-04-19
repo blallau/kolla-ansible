@@ -64,7 +64,7 @@ designate_services:
   designate-sink:
     container_name: designate_sink
     group: designate-sink
-    enabled: true
+    enabled: false
     image: "{{ designate_sink_image_full }}"
     volumes: "{{ designate_sink_default_volumes + designate_sink_extra_volumes }}"
     dimensions: "{{ designate_sink_dimensions }}"

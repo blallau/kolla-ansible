@@ -550,6 +550,7 @@
 # Valid options are [ bind9 ]
 #designate_backend: "bind9"
 #designate_ns_record: "sample.openstack.org"
+#designate_dns_domain: "openstack.org"
 # Valid options are [ '', redis ]
 #designate_coordination_backend: "{{ 'redis' if enable_redis|bool else '' }}"
 

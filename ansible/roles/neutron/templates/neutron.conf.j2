@@ -65,7 +65,7 @@ router_distributed = True
 {% endif %}
 
 {% if enable_designate | bool %}
-dns_domain = {{ designate_ns_record }}.
+dns_domain = {{ designate_dns_domain }}.
 external_dns_driver = designate
 {% if neutron_plugin_agent == 'vmware_nsxv' %}
 nsx_extension_drivers = vmware_nsxv_dns
